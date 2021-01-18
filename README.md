@@ -1,2 +1,2 @@
 # Go-Variance
-A covariance analysis of final positions in Go
+A covariance analysis of final positions in Go.

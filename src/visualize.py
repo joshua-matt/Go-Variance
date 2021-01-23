@@ -55,7 +55,7 @@ def visualize_principals(cov, K, ncols, save):
             plots[i,j].pcolormesh(np.flipud(principals[:, ncols*i+j].reshape(19, 19)), cmap=cmap, vmin=-0.5, vmax=0.5) # Make plot in row i, column j the correct reshaped principal component
     plt.tight_layout()
     if save:
-        plt.savefig("./plots/PCA/%f.png" % (time.time()))
+        plt.savefig("../plots/PCA/%f.png" % (time.time()))
     plt.show()
 
 """
@@ -114,7 +114,7 @@ def save_board_correlations(save):
         fig.suptitle("Coordinate: (%d,%d), Row: %d" % (i//19+1, i%19+1, i+1), size=24)
         fig.tight_layout()
         if save:
-            plt.savefig("./plots/%d.png" % (i))
+            plt.savefig("../plots/%d.png" % (i))
         else:
             plt.show()
         plt.close()
@@ -140,7 +140,7 @@ def save_PC(save):
                                    vmax=0.5)
             fig.tight_layout()
             if save:
-                plt.savefig("./plots/PCA/%s/%d.png" % (cov[1], i + 1))
+                plt.savefig("../plots/PCA/%s/%d.png" % (cov[1], i + 1))
             else:
                 plt.show()
             plt.close()

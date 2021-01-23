@@ -25,7 +25,7 @@ Preconditions:
     - folder contains only .sgf files
 """
 def convert_all_sgf(folder, overwrite=False):
-    dir = os.getcwd() + "\\data\\" + folder # Get the whole file path to the folder
+    dir = os.getcwd() + "..\\data\\" + folder # Get the whole file path to the folder
     if not os.path.exists(dir + "_csv"):
         os.mkdir(dir + "_csv") # Make directory for new .csv files
 
@@ -73,7 +73,7 @@ Preconditions:
 """
 def mean_board_csv(folder):
     avg = np.zeros((19, 19)) # Accumulator for the mean board
-    dir = os.getcwd() + "\\data\\" + folder
+    dir = os.getcwd() + "..\\data\\" + folder
 
     i = 0
     t1 = time.time()
@@ -136,7 +136,7 @@ def mean_normalize(folders):
     for folder in folders:
         print(folder+"\n")
 
-        dir = os.getcwd() + "\\data\\" + folder
+        dir = os.getcwd() + "..\\data\\" + folder
 
         if not os.path.exists(dir + "_norm"):
             os.mkdir(dir + "_norm")

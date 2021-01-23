@@ -3,7 +3,7 @@ import numpy.linalg as la # Get principal components
 import pandas as pd # Open .csv files
 import os # Path tools
 
-dir = os.getcwd() + "\\data\\"
+dir = os.getcwd() + "..\\data\\"
 
 """
 get_cov
